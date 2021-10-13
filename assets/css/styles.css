@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+::selection {
+  color: #ffff;
+  background: rgb(142, 73, 232);
+}
+/* body{
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; 
+  padding: 10px;
+  background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+} */
+/* .animate {
+  transform: translateX(100px);
+} */
+body {
+  background-color: #fff;
+  height: 100vh;
+  background-color: rgb(187, 62, 3);
+}
+
+.dark {
+  background-color: black;
+
+  color: white;
+}
+/* header {
+  background-image: url("../images/day.jpeg");
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+} */
+.container {
+  /* width: 50%; */
+  position: absolute;
+  top: 25%;
+  margin-left: 35%;
+  margin-right: auto;
+  background: rgb(245, 240, 240);
+  color: #000;
+  max-width: 400px;
+  width: 100%;
+  /* margin: 120px auto; */
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: rgb(85, 80, 80);
+}
+@media (min-width: 450px) {
+  .container {
+    margin-left: 10%;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 650px) {
+  .container {
+    margin-left: 20%;
+    margin-right: auto;
+  }
+}
+@media (min-width: 750px) {
+  .container {
+    margin-left: 30%;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1250px) {
+  .container {
+    margin-left: 35%;
+    margin-right: auto;
+  }
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.container .inputField {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+.inputField input {
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+.inputField input:focus {
+  border-color: #8e49e8;
+}
+.inputField button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: #8e49e8;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.inputField button:hover,
+.footer button:hover {
+  background: #721ce3;
+}
+.inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.container .todoList {
+  max-height: 250px;
+  overflow-y: auto;
+}
+.todoList li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 8px;
+  background: #f2f2f2;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: default;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.todoList li .icon {
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e74c3c;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todoList li:hover .icon {
+  right: 0px;
+}
+.container .container-footer {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-footer button {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: #8e49e8;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.container-footer button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* toggle in label designing */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+
+/* After slide changes */
+.toggle:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  background: #8e49e8;
+  top: 1px;
+  left: 1px;
+  transition: all 0.5s;
+}
+
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+  left: 49px;
+}
+
+/* Checkbox checked toggle label bg color */
+/* .checkbox:checked + .toggle {
+		background-color:black;
+	}
+			 */
+/* Checkbox vanished */
+.checkbox {
+  display: none;
+}
+
+/* Footer style
+
+img.social {
+  width: 20px;
+  margin: 0 10px;
+}
+
+footer {
+  /* background-color: #4f4dde; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+
+
+} */
